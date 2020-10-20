@@ -1,10 +1,10 @@
 import sys
 
-encodeDecode = None
+encodeDecode = sys.argv[1].upper()
 txt = sys.argv[2].upper()
 key = sys.argv[3].upper()
 
-if sys.argv[3] == "True":
+if encodeDecode == "ENCODE":
     encodeDecode = True
 else:
     encodeDecode = False
@@ -31,7 +31,7 @@ def encode(str1, str2):
 
     return (encodedTXT)
 
-if encodeDecode == "ENCODE":
+if encodeDecode == True:
     print (encode(txt, expandedKey))
 
 def decode(str1,str2):
@@ -47,5 +47,5 @@ def decode(str1,str2):
 
     return (decodedTXT)
 
-if encodeDecode == "DECODE":
+if encodeDecode == False:
     print (decode(txt, expandedKey))
