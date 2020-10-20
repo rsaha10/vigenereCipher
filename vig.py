@@ -1,10 +1,10 @@
-userInput = input("Please input text followed by your desired key and finally either True or False, True to encode and False to decode: ")
+import sys
 
-x = userInput.split()
-txt = x[0].upper()
-key = x[1].upper()
 encodeDecode = None
-if x[2] == "True":
+txt = sys.argv[1].upper()
+key = sys.argv[2].upper()
+
+if sys.argv[0] == "True":
     encodeDecode = True
 else:
     encodeDecode = False
@@ -31,7 +31,7 @@ def encode(str1, str2):
 
     return (encodedTXT)
 
-if encodeDecode == True:
+if encodeDecode == "ENCODE":
     print (encode(txt, expandedKey))
 
 def decode(str1,str2):
@@ -47,5 +47,5 @@ def decode(str1,str2):
 
     return (decodedTXT)
 
-if encodeDecode == False:
+if encodeDecode == "DECODE":
     print (decode(txt, expandedKey))

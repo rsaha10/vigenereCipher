@@ -1,8 +1,4 @@
-#vigenere cipher
+all:	vig.py
 
 run:
-	python vig.py
-
-	make encode ARGS="plaintext key True"
-
-	make decode ARGS="plaintext key False"
+		python vig.py $(ARGS)
