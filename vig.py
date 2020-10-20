@@ -1,10 +1,10 @@
 import sys
 
 encodeDecode = None
-txt = sys.argv[1].upper()
-key = sys.argv[2].upper()
+txt = sys.argv[2].upper()
+key = sys.argv[3].upper()
 
-if sys.argv[0] == "True":
+if sys.argv[3] == "True":
     encodeDecode = True
 else:
     encodeDecode = False
